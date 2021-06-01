@@ -1,0 +1,197 @@
+kubectl logs -f activemq-artemis-master-0 -n n-stack-nle
+Merging input with '/var/lib/artemis/etc-override/broker-10.xml'
+Merging input with '/var/lib/artemis/etc-override/broker-11.xml'
+Merging input with '/opt/assets/enable-jmx.xml'
+Calculating performance journal ...
+104000
+     _        _               _
+    / \  ____| |_  ___ __  __(_) _____
+   / _ \|  _ \ __|/ _ \  \/  | |/  __/
+  / ___ \ | \/ |_/  __/ |\/| | |\___ \
+ /_/   \_\|   \__\____|_|  |_|_|/___ /
+ Apache ActiveMQ Artemis 2.17.0
+
+
+2021-06-01 15:43:36,783 INFO  [org.apache.activemq.artemis.integration.bootstrap] AMQ101000: Starting ActiveMQ Artemis Server
+2021-06-01 15:43:36,859 INFO  [org.apache.activemq.artemis.core.server] AMQ221000: live Message Broker is starting with configuration Broker Configuration (clustered=true,journalDirectory=data/journal,bindingsDirectory=data/bindings,largeMessagesDirectory=data/large-messages,pagingDirectory=data/paging)
+2021-06-01 15:43:36,912 INFO  [org.apache.activemq.artemis.core.server] AMQ221012: Using AIO Journal
+2021-06-01 15:43:36,977 INFO  [org.apache.activemq.artemis.core.server] AMQ221057: Global Max Size is being adjusted to 1/2 of the JVM max size (-Xmx). being defined as 16,089,350,144
+2021-06-01 15:43:37,023 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-server]. Adding protocol support for: CORE
+2021-06-01 15:43:37,023 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-amqp-protocol]. Adding protocol support for: AMQP
+2021-06-01 15:43:37,023 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-hornetq-protocol]. Adding protocol support for: HORNETQ
+2021-06-01 15:43:37,024 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-mqtt-protocol]. Adding protocol support for: MQTT
+2021-06-01 15:43:37,024 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-openwire-protocol]. Adding protocol support for: OPENWIRE
+2021-06-01 15:43:37,024 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-stomp-protocol]. Adding protocol support for: STOMP
+2021-06-01 15:43:37,086 INFO  [org.apache.activemq.artemis.core.server] AMQ221034: Waiting indefinitely to obtain live lock
+2021-06-01 15:43:37,086 INFO  [org.apache.activemq.artemis.core.server] AMQ221035: Live Server Obtained live lock
+2021-06-01 15:43:37,192 ERROR [org.apache.activemq.artemis.core.client] AMQ214016: Failed to create netty connection: java.net.UnknownHostException: activemq-artemis-master-1.activemq-artemis-master.n-stack-nle.svc.cluster.local
+        at java.net.InetAddress.getAllByName0(InetAddress.java:1280) [rt.jar:1.8.0_171]
+        at java.net.InetAddress.getAllByName(InetAddress.java:1192) [rt.jar:1.8.0_171]
+        at java.net.InetAddress.getAllByName(InetAddress.java:1126) [rt.jar:1.8.0_171]
+        at java.net.InetAddress.getByName(InetAddress.java:1076) [rt.jar:1.8.0_171]
+        at io.netty.util.internal.SocketUtils$8.run(SocketUtils.java:156) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.internal.SocketUtils$8.run(SocketUtils.java:153) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at java.security.AccessController.doPrivileged(Native Method) [rt.jar:1.8.0_171]
+        at io.netty.util.internal.SocketUtils.addressByName(SocketUtils.java:153) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.resolver.DefaultNameResolver.doResolve(DefaultNameResolver.java:41) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.resolver.SimpleNameResolver.resolve(SimpleNameResolver.java:61) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.resolver.SimpleNameResolver.resolve(SimpleNameResolver.java:53) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.resolver.InetSocketAddressResolver.doResolve(InetSocketAddressResolver.java:55) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.resolver.InetSocketAddressResolver.doResolve(InetSocketAddressResolver.java:31) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.resolver.AbstractAddressResolver.resolve(AbstractAddressResolver.java:106) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.bootstrap.Bootstrap.doResolveAndConnect0(Bootstrap.java:206) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.bootstrap.Bootstrap.access$000(Bootstrap.java:46) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.bootstrap.Bootstrap$1.operationComplete(Bootstrap.java:180) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.bootstrap.Bootstrap$1.operationComplete(Bootstrap.java:166) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:577) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:551) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:490) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:615) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.concurrent.DefaultPromise.setSuccess0(DefaultPromise.java:604) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.concurrent.DefaultPromise.trySuccess(DefaultPromise.java:104) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.channel.DefaultChannelPromise.trySuccess(DefaultChannelPromise.java:84) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.channel.AbstractChannel$AbstractUnsafe.safeSetSuccess(AbstractChannel.java:984) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:504) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:417) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:474) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:387) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at org.apache.activemq.artemis.utils.ActiveMQThreadFactory$1.run(ActiveMQThreadFactory.java:118) [artemis-commons-2.17.0.jar:2.17.0]
+
+2021-06-01 15:43:37,244 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address DLQ supporting [ANYCAST]
+2021-06-01 15:43:37,256 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue DLQ on address DLQ
+2021-06-01 15:43:37,319 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ExpiryQueue supporting [ANYCAST]
+2021-06-01 15:43:37,320 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ExpiryQueue on address ExpiryQueue
+2021-06-01 15:43:37,544 ERROR [org.apache.activemq.artemis.core.client] AMQ214016: Failed to create netty connection: java.net.UnknownHostException: activemq-artemis-master-1.activemq-artemis-master.n-stack-nle.svc.cluster.local
+        at java.net.InetAddress.getAllByName0(InetAddress.java:1280) [rt.jar:1.8.0_171]
+        at java.net.InetAddress.getAllByName(InetAddress.java:1192) [rt.jar:1.8.0_171]
+        at java.net.InetAddress.getAllByName(InetAddress.java:1126) [rt.jar:1.8.0_171]
+        at java.net.InetAddress.getByName(InetAddress.java:1076) [rt.jar:1.8.0_171]
+        at io.netty.util.internal.SocketUtils$8.run(SocketUtils.java:156) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.internal.SocketUtils$8.run(SocketUtils.java:153) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at java.security.AccessController.doPrivileged(Native Method) [rt.jar:1.8.0_171]
+        at io.netty.util.internal.SocketUtils.addressByName(SocketUtils.java:153) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.resolver.DefaultNameResolver.doResolve(DefaultNameResolver.java:41) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.resolver.SimpleNameResolver.resolve(SimpleNameResolver.java:61) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.resolver.SimpleNameResolver.resolve(SimpleNameResolver.java:53) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.resolver.InetSocketAddressResolver.doResolve(InetSocketAddressResolver.java:55) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.resolver.InetSocketAddressResolver.doResolve(InetSocketAddressResolver.java:31) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.resolver.AbstractAddressResolver.resolve(AbstractAddressResolver.java:106) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.bootstrap.Bootstrap.doResolveAndConnect0(Bootstrap.java:206) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.bootstrap.Bootstrap.access$000(Bootstrap.java:46) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.bootstrap.Bootstrap$1.operationComplete(Bootstrap.java:180) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.bootstrap.Bootstrap$1.operationComplete(Bootstrap.java:166) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:577) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:551) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:490) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:615) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.concurrent.DefaultPromise.setSuccess0(DefaultPromise.java:604) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.concurrent.DefaultPromise.trySuccess(DefaultPromise.java:104) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.channel.DefaultChannelPromise.trySuccess(DefaultChannelPromise.java:84) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.channel.AbstractChannel$AbstractUnsafe.safeSetSuccess(AbstractChannel.java:984) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:504) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:417) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:474) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:387) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+        at org.apache.activemq.artemis.utils.ActiveMQThreadFactory$1.run(ActiveMQThreadFactory.java:118) [artemis-commons-2.17.0.jar:2.17.0]
+
+2021-06-01 15:43:37,557 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started EPOLL Acceptor at 0.0.0.0:61616 for protocols [CORE,MQTT,AMQP,STOMP,HORNETQ,OPENWIRE]
+2021-06-01 15:43:37,591 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started EPOLL Acceptor at 0.0.0.0:5445 for protocols [HORNETQ,STOMP]
+2021-06-01 15:43:37,594 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started EPOLL Acceptor at 0.0.0.0:5672 for protocols [AMQP]
+2021-06-01 15:43:37,599 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started EPOLL Acceptor at 0.0.0.0:1883 for protocols [MQTT]
+2021-06-01 15:43:37,618 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started EPOLL Acceptor at 0.0.0.0:61613 for protocols [STOMP]
+2021-06-01 15:43:37,622 INFO  [org.apache.activemq.artemis.core.server] AMQ221007: Server is now live
+2021-06-01 15:43:37,623 INFO  [org.apache.activemq.artemis.core.server] AMQ221001: Apache ActiveMQ Artemis Message Broker version 2.17.0 [activemq-artemis-master-0, nodeID=211cff8e-c2f0-11eb-8a50-be88ec07afaf]
+2021-06-01 15:43:38,060 INFO  [org.apache.activemq.hawtio.branding.PluginContextListener] Initialized activemq-branding plugin
+2021-06-01 15:43:38,100 INFO  [org.apache.activemq.hawtio.plugin.PluginContextListener] Initialized artemis-plugin plugin
+2021-06-01 15:43:38,307 INFO  [io.hawt.HawtioContextListener] Initialising hawtio services
+2021-06-01 15:43:38,320 INFO  [io.hawt.system.ConfigManager] Configuration will be discovered via system properties
+2021-06-01 15:43:38,323 INFO  [io.hawt.jmx.JmxTreeWatcher] Welcome to Hawtio 2.11.0
+2021-06-01 15:43:38,328 INFO  [io.hawt.web.auth.AuthenticationConfiguration] Starting hawtio authentication filter, JAAS realm: "activemq" authorized role(s): "amq" role principal classes: "org.apache.activemq.artemis.spi.core.security.jaas.RolePrincipal"
+2021-06-01 15:43:38,343 INFO  [io.hawt.web.proxy.ProxyServlet] Proxy servlet is disabled
+2021-06-01 15:43:38,349 INFO  [io.hawt.web.servlets.JolokiaConfiguredAgentServlet] Jolokia overridden property: [key=policyLocation, value=file:/var/lib/artemis/etc/jolokia-access.xml]
+2021-06-01 15:43:38,427 INFO  [org.apache.activemq.artemis] AMQ241001: HTTP Server started at http://0.0.0.0:8161
+2021-06-01 15:43:38,427 INFO  [org.apache.activemq.artemis] AMQ241002: Artemis Jolokia REST API available at http://0.0.0.0:8161/console/jolokia
+2021-06-01 15:43:38,427 INFO  [org.apache.activemq.artemis] AMQ241004: Artemis Console available at http://0.0.0.0:8161/console
+2021-06-01 15:44:14,987 INFO  [org.apache.activemq.artemis.core.server] AMQ221027: Bridge ClusterConnectionBridge@71827692 [name=$.artemis.internal.sf.activemq-artemis.374f37d3-c2f0-11eb-945a-ca2c734f5b63, queue=QueueImpl[name=$.artemis.internal.sf.activemq-artemis.374f37d3-c2f0-11eb-945a-ca2c734f5b63, postOffice=PostOfficeImpl [server=ActiveMQServerImpl::serverUUID=211cff8e-c2f0-11eb-8a50-be88ec07afaf], temp=false]@5538a598 targetConnector=ServerLocatorImpl (identity=(Cluster-connection-bridge::ClusterConnectionBridge@71827692 [name=$.artemis.internal.sf.activemq-artemis.374f37d3-c2f0-11eb-945a-ca2c734f5b63, queue=QueueImpl[name=$.artemis.internal.sf.activemq-artemis.374f37d3-c2f0-11eb-945a-ca2c734f5b63, postOffice=PostOfficeImpl [server=ActiveMQServerImpl::serverUUID=211cff8e-c2f0-11eb-8a50-be88ec07afaf], temp=false]@5538a598 targetConnector=ServerLocatorImpl [initialConnectors=[TransportConfiguration(name=activemq-artemis-master-1, factory=org-apache-activemq-artemis-core-remoting-impl-netty-NettyConnectorFactory) ?port=61616&host=activemq-artemis-master-1-activemq-artemis-master-n-stack-nle-svc-cluster-local], discoveryGroupConfiguration=null]]::ClusterConnectionImpl@1557989809[nodeUUID=211cff8e-c2f0-11eb-8a50-be88ec07afaf, connector=TransportConfiguration(name=activemq-artemis-master-0, factory=org-apache-activemq-artemis-core-remoting-impl-netty-NettyConnectorFactory) ?port=61616&host=activemq-artemis-master-0-activemq-artemis-master-n-stack-nle-svc-cluster-local, address=, server=ActiveMQServerImpl::serverUUID=211cff8e-c2f0-11eb-8a50-be88ec07afaf])) [initialConnectors=[TransportConfiguration(name=activemq-artemis-master-1, factory=org-apache-activemq-artemis-core-remoting-impl-netty-NettyConnectorFactory) ?port=61616&host=activemq-artemis-master-1-activemq-artemis-master-n-stack-nle-svc-cluster-local], discoveryGroupConfiguration=null]] is connected
+2021-06-01 17:08:39,416 INFO  [io.hawt.web.auth.LoginServlet] Hawtio login is using 1800 sec. HttpSession timeout
+2021-06-01 17:08:39,453 INFO  [io.hawt.web.auth.LoginServlet] Logging in user: ce0f735e-a44c-4e27-83d8-8308758b016e
+2021-06-01 17:08:40,404 INFO  [io.hawt.web.auth.keycloak.KeycloakServlet] Keycloak integration is disabled
+2021-06-01 17:37:59,756 INFO  [org.apache.activemq.artemis.core.server] AMQ221029: stopped bridge $.artemis.internal.sf.activemq-artemis.374f37d3-c2f0-11eb-945a-ca2c734f5b63
+2021-06-01 17:37:59,995 INFO  [io.hawt.web.auth.AuthenticationFilter] Destroying hawtio authentication filter
+2021-06-01 17:37:59,996 INFO  [io.hawt.HawtioContextListener] Destroying hawtio services
+2021-06-01 17:38:00,004 INFO  [org.apache.activemq.hawtio.plugin.PluginContextListener] Destroyed artemis-plugin plugin
+2021-06-01 17:38:00,007 INFO  [org.apache.activemq.hawtio.branding.PluginContextListener] Destroyed activemq-branding plugin
+2021-06-01 17:38:00,021 INFO  [org.apache.activemq.artemis.core.server] AMQ221002: Apache ActiveMQ Artemis Message Broker version 2.17.0 [211cff8e-c2f0-11eb-8a50-be88ec07afaf] stopped, uptime 1 hour 54 minutes
+rpc error: code = Unknown desc = Error: No such container: 6a1e8dccb4602e2e16e9f03e0a6076f808f7b6952f0ac83d13b2812758d083f5nle@NLE-D:/mnt/c/Users/nle$ kubectl logs -f activemq-artemis-master-0 -n n-stack-nle
+Merging input with '/var/lib/artemis/etc-override/broker-10.xml'
+Merging input with '/var/lib/artemis/etc-override/broker-11.xml'
+Merging input with '/opt/assets/enable-jmx.xml'
+Volume's journal buffer already fine tuned
+     _        _               _
+    / \  ____| |_  ___ __  __(_) _____
+   / _ \|  _ \ __|/ _ \  \/  | |/  __/
+  / ___ \ | \/ |_/  __/ |\/| | |\___ \
+ /_/   \_\|   \__\____|_|  |_|_|/___ /
+ Apache ActiveMQ Artemis 2.17.0
+
+
+2021-06-01 17:38:28,488 INFO  [org.apache.activemq.artemis.integration.bootstrap] AMQ101000: Starting ActiveMQ Artemis Server
+2021-06-01 17:38:28,516 INFO  [org.apache.activemq.artemis.core.server] AMQ221000: live Message Broker is starting with configuration Broker Configuration (clustered=true,journalDirectory=data/journal,bindingsDirectory=data/bindings,largeMessagesDirectory=data/large-messages,pagingDirectory=data/paging)
+2021-06-01 17:38:28,571 INFO  [org.apache.activemq.artemis.core.server] AMQ221012: Using AIO Journal
+2021-06-01 17:38:28,638 INFO  [org.apache.activemq.artemis.core.server] AMQ221057: Global Max Size is being adjusted to 1/2 of the JVM max size (-Xmx). being defined as 16,089,350,144
+2021-06-01 17:38:28,689 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-server]. Adding protocol support for: CORE
+2021-06-01 17:38:28,689 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-amqp-protocol]. Adding protocol support for: AMQP
+2021-06-01 17:38:28,690 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-hornetq-protocol]. Adding protocol support for: HORNETQ
+2021-06-01 17:38:28,690 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-mqtt-protocol]. Adding protocol support for: MQTT
+2021-06-01 17:38:28,690 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-openwire-protocol]. Adding protocol support for: OPENWIRE
+2021-06-01 17:38:28,691 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-stomp-protocol]. Adding protocol support for: STOMP
+2021-06-01 17:38:28,757 INFO  [org.apache.activemq.artemis.core.server] AMQ221034: Waiting indefinitely to obtain live lock
+2021-06-01 17:38:28,757 INFO  [org.apache.activemq.artemis.core.server] AMQ221035: Live Server Obtained live lock
+2021-06-01 17:38:29,157 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address DLQ supporting [ANYCAST]
+2021-06-01 17:38:29,158 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue DLQ on address DLQ
+2021-06-01 17:38:29,165 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ExpiryQueue supporting [ANYCAST]
+2021-06-01 17:38:29,166 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ExpiryQueue on address ExpiryQueue
+2021-06-01 17:38:29,389 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started EPOLL Acceptor at 0.0.0.0:61616 for protocols [CORE,MQTT,AMQP,STOMP,HORNETQ,OPENWIRE]
+2021-06-01 17:38:29,421 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started EPOLL Acceptor at 0.0.0.0:5445 for protocols [HORNETQ,STOMP]
+2021-06-01 17:38:29,424 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started EPOLL Acceptor at 0.0.0.0:5672 for protocols [AMQP]
+2021-06-01 17:38:29,426 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started EPOLL Acceptor at 0.0.0.0:1883 for protocols [MQTT]
+2021-06-01 17:38:29,439 INFO  [org.apache.activemq.artemis.core.server] AMQ221027: Bridge ClusterConnectionBridge@5350efc7 [name=$.artemis.internal.sf.activemq-artemis.374f37d3-c2f0-11eb-945a-ca2c734f5b63, queue=QueueImpl[name=$.artemis.internal.sf.activemq-artemis.374f37d3-c2f0-11eb-945a-ca2c734f5b63, postOffice=PostOfficeImpl [server=ActiveMQServerImpl::serverUUID=211cff8e-c2f0-11eb-8a50-be88ec07afaf], temp=false]@2b3b84c2 targetConnector=ServerLocatorImpl (identity=(Cluster-connection-bridge::ClusterConnectionBridge@5350efc7 [name=$.artemis.internal.sf.activemq-artemis.374f37d3-c2f0-11eb-945a-ca2c734f5b63, queue=QueueImpl[name=$.artemis.internal.sf.activemq-artemis.374f37d3-c2f0-11eb-945a-ca2c734f5b63, postOffice=PostOfficeImpl [server=ActiveMQServerImpl::serverUUID=211cff8e-c2f0-11eb-8a50-be88ec07afaf], temp=false]@2b3b84c2 targetConnector=ServerLocatorImpl [initialConnectors=[TransportConfiguration(name=activemq-artemis-master-1, factory=org-apache-activemq-artemis-core-remoting-impl-netty-NettyConnectorFactory) ?port=61616&host=activemq-artemis-master-1-activemq-artemis-master-n-stack-nle-svc-cluster-local], discoveryGroupConfiguration=null]]::ClusterConnectionImpl@1390301622[nodeUUID=211cff8e-c2f0-11eb-8a50-be88ec07afaf, connector=TransportConfiguration(name=activemq-artemis-master-0, factory=org-apache-activemq-artemis-core-remoting-impl-netty-NettyConnectorFactory) ?port=61616&host=activemq-artemis-master-0-activemq-artemis-master-n-stack-nle-svc-cluster-local, address=, server=ActiveMQServerImpl::serverUUID=211cff8e-c2f0-11eb-8a50-be88ec07afaf])) [initialConnectors=[TransportConfiguration(name=activemq-artemis-master-1, factory=org-apache-activemq-artemis-core-remoting-impl-netty-NettyConnectorFactory) ?port=61616&host=activemq-artemis-master-1-activemq-artemis-master-n-stack-nle-svc-cluster-local], discoveryGroupConfiguration=null]] is connected
+2021-06-01 17:38:29,471 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started EPOLL Acceptor at 0.0.0.0:61613 for protocols [STOMP]
+2021-06-01 17:38:29,475 INFO  [org.apache.activemq.artemis.core.server] AMQ221007: Server is now live
+2021-06-01 17:38:29,475 INFO  [org.apache.activemq.artemis.core.server] AMQ221001: Apache ActiveMQ Artemis Message Broker version 2.17.0 [activemq-artemis-master-0, nodeID=211cff8e-c2f0-11eb-8a50-be88ec07afaf]
+2021-06-01 17:38:29,786 INFO  [org.apache.activemq.hawtio.branding.PluginContextListener] Initialized activemq-branding plugin
+2021-06-01 17:38:29,820 INFO  [org.apache.activemq.hawtio.plugin.PluginContextListener] Initialized artemis-plugin plugin
+2021-06-01 17:38:30,034 INFO  [io.hawt.HawtioContextListener] Initialising hawtio services
+2021-06-01 17:38:30,048 INFO  [io.hawt.system.ConfigManager] Configuration will be discovered via system properties
+2021-06-01 17:38:30,051 INFO  [io.hawt.jmx.JmxTreeWatcher] Welcome to Hawtio 2.11.0
+2021-06-01 17:38:30,056 INFO  [io.hawt.web.auth.AuthenticationConfiguration] Starting hawtio authentication filter, JAAS realm: "activemq" authorized role(s): "amq" role principal classes: "org.apache.activemq.artemis.spi.core.security.jaas.RolePrincipal"
+2021-06-01 17:38:30,071 INFO  [io.hawt.web.proxy.ProxyServlet] Proxy servlet is disabled
+2021-06-01 17:38:30,079 INFO  [io.hawt.web.servlets.JolokiaConfiguredAgentServlet] Jolokia overridden property: [key=policyLocation, value=file:/var/lib/artemis/etc/jolokia-access.xml]
+2021-06-01 17:38:30,158 INFO  [org.apache.activemq.artemis] AMQ241001: HTTP Server started at http://0.0.0.0:8161
+2021-06-01 17:38:30,159 INFO  [org.apache.activemq.artemis] AMQ241002: Artemis Jolokia REST API available at http://0.0.0.0:8161/console/jolokia
+2021-06-01 17:38:30,159 INFO  [org.apache.activemq.artemis] AMQ241004: Artemis Console available at http://0.0.0.0:8161/console
+2021-06-01 17:38:33,344 ERROR [org.apache.activemq.artemis.core.server] AMQ224016: Caught exception: ActiveMQIllegalStateException[errorType=ILLEGAL_STATE message=AMQ229027: Could not find reference on consumer ID=0, messageId = 5,102 queue = QUEUE.service2.notification]
+        at org.apache.activemq.artemis.core.server.impl.ServerConsumerImpl.acknowledge(ServerConsumerImpl.java:926) [artemis-server-2.17.0.jar:2.17.0]
+        at org.apache.activemq.artemis.core.server.impl.ServerSessionImpl.acknowledge(ServerSessionImpl.java:1222) [artemis-server-2.17.0.jar:2.17.0]
+        at org.apache.activemq.artemis.core.protocol.core.ServerSessionPacketHandler.onSessionAcknowledge(ServerSessionPacketHandler.java:685) [artemis-server-2.17.0.jar:2.17.0]
+        at org.apache.activemq.artemis.core.protocol.core.ServerSessionPacketHandler.onMessagePacket(ServerSessionPacketHandler.java:279) [artemis-server-2.17.0.jar:2.17.0]
+        at org.apache.activemq.artemis.utils.actors.Actor.doTask(Actor.java:33) [artemis-commons-2.17.0.jar:2.17.0]
+        at org.apache.activemq.artemis.utils.actors.ProcessorBase.executePendingTasks(ProcessorBase.java:65) [artemis-commons-2.17.0.jar:2.17.0]
+        at org.apache.activemq.artemis.utils.actors.OrderedExecutor.doTask(OrderedExecutor.java:42) [artemis-commons-2.17.0.jar:2.17.0]
+        at org.apache.activemq.artemis.utils.actors.OrderedExecutor.doTask(OrderedExecutor.java:31) [artemis-commons-2.17.0.jar:2.17.0]
+        at org.apache.activemq.artemis.utils.actors.ProcessorBase.executePendingTasks(ProcessorBase.java:65) [artemis-commons-2.17.0.jar:2.17.0]
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [rt.jar:1.8.0_171]
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [rt.jar:1.8.0_171]
+        at org.apache.activemq.artemis.utils.ActiveMQThreadFactory$1.run(ActiveMQThreadFactory.java:118) [artemis-commons-2.17.0.jar:2.17.0]
+
+2021-06-01 17:41:58,336 INFO  [io.hawt.web.auth.LoginServlet] Hawtio login is using 1800 sec. HttpSession timeout
+2021-06-01 17:41:59,333 INFO  [io.hawt.web.auth.keycloak.KeycloakServlet] Keycloak integration is disabled
+2021-06-01 17:42:09,794 INFO  [io.hawt.web.auth.LoginServlet] Logging in user: ce0f735e-a44c-4e27-83d8-8308758b016e

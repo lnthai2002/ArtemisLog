@@ -1,0 +1,119 @@
+2021-06-01 17:36:25.933  INFO 1 --- [o-60003-exec-10] c.n.b.s.intercepters.TenantInterceptor   : TenantID: [188100000079::nle-01::nle0::service2] for request [/v1/jms/sendToQueue/notification/count/10/interval/1000]
+2021-06-01 17:36:36.325  INFO 1 --- [ueueListener0-1] cloud.na.service2.jms.QueueListener  : ---Start attempt 2b025eff-f93e-4894-a237-bd07015dcf82
+2021-06-01 17:36:36.326  INFO 1 --- [ueueListener0-1] cloud.na.service2.jms.QueueListener  : ---QUEUE[notification]:  message=2ThaiSend10ToQueueEvery1sec-0, sentBy=nhutthai.le@na.com, sentFrom=service2, sentAt=1622568986120
+2021-06-01 17:36:36.326  INFO 1 --- [ueueListener0-1] cloud.na.service2.jms.QueueListener  : ---Attempt 2b025eff-f93e-4894-a237-bd07015dcf82 saved, sleep now
+2021-06-01 17:36:56.326  INFO 1 --- [ueueListener0-1] cloud.na.service2.jms.QueueListener  : ---Attempt 2b025eff-f93e-4894-a237-bd07015dcf82 processed
+2021-06-01 17:36:56.329  INFO 1 --- [ueueListener0-1] cloud.na.service2.jms.QueueListener  : ---Start attempt 5d405554-d620-4c4c-b2e8-b2db71b70d1e
+2021-06-01 17:36:56.329  INFO 1 --- [ueueListener0-1] cloud.na.service2.jms.QueueListener  : ---QUEUE[notification]:  message=2ThaiSend10ToQueueEvery1sec-1, sentBy=nhutthai.le@na.com, sentFrom=service2, sentAt=1622568987139
+2021-06-01 17:36:56.329  INFO 1 --- [ueueListener0-1] cloud.na.service2.jms.QueueListener  : ---Attempt 5d405554-d620-4c4c-b2e8-b2db71b70d1e saved, sleep now
+2021-06-01 17:37:16.330  INFO 1 --- [ueueListener0-1] cloud.na.service2.jms.QueueListener  : ---Attempt 5d405554-d620-4c4c-b2e8-b2db71b70d1e processed
+2021-06-01 17:37:16.333  INFO 1 --- [ueueListener0-1] cloud.na.service2.jms.QueueListener  : ---Start attempt 5621b287-d5b3-47fb-916f-5aa6b4242e35
+2021-06-01 17:37:16.333  INFO 1 --- [ueueListener0-1] cloud.na.service2.jms.QueueListener  : ---QUEUE[notification]:  message=2ThaiSend10ToQueueEvery1sec-2, sentBy=nhutthai.le@na.com, sentFrom=service2, sentAt=1622568988165
+2021-06-01 17:37:16.333  INFO 1 --- [ueueListener0-1] cloud.na.service2.jms.QueueListener  : ---Attempt 5621b287-d5b3-47fb-916f-5aa6b4242e35 saved, sleep now
+2021-06-01 17:37:36.333  INFO 1 --- [ueueListener0-1] cloud.na.service2.jms.QueueListener  : ---Attempt 5621b287-d5b3-47fb-916f-5aa6b4242e35 processed
+2021-06-01 17:37:36.336  INFO 1 --- [ueueListener0-1] cloud.na.service2.jms.QueueListener  : ---Start attempt c53c5cde-daab-44dd-9dc8-b2ad38b07b96
+2021-06-01 17:37:36.336  INFO 1 --- [ueueListener0-1] cloud.na.service2.jms.QueueListener  : ---QUEUE[notification]:  message=2ThaiSend10ToQueueEvery1sec-3, sentBy=nhutthai.le@na.com, sentFrom=service2, sentAt=1622568989184
+2021-06-01 17:37:36.336  INFO 1 --- [ueueListener0-1] cloud.na.service2.jms.QueueListener  : ---Attempt c53c5cde-daab-44dd-9dc8-b2ad38b07b96 saved, sleep now
+2021-06-01 17:37:56.336  INFO 1 --- [ueueListener0-1] cloud.na.service2.jms.QueueListener  : ---Attempt c53c5cde-daab-44dd-9dc8-b2ad38b07b96 processed
+2021-06-01 17:37:56.340  INFO 1 --- [ueueListener0-1] cloud.na.service2.jms.QueueListener  : ---Start attempt eea72ceb-96f4-47b6-ac93-ca9c87128fb5
+2021-06-01 17:37:56.340  INFO 1 --- [ueueListener0-1] cloud.na.service2.jms.QueueListener  : ---QUEUE[notification]:  message=2ThaiSend10ToQueueEvery1sec-4, sentBy=nhutthai.le@na.com, sentFrom=service2, sentAt=1622568990204
+2021-06-01 17:37:56.340  INFO 1 --- [ueueListener0-1] cloud.na.service2.jms.QueueListener  : ---Attempt eea72ceb-96f4-47b6-ac93-ca9c87128fb5 saved, sleep now
+2021-06-01 17:37:59.829  WARN 1 --- [global-threads)] org.apache.activemq.artemis.core.client  : AMQ212037: Connection failure to activemq-artemis-master-0.activemq-artemis-master.n-stack-nle.svc.cluster.local/10.0.44.247:61616 has been detected: AMQ219015: The connection was disconnected because of server shutdown [code=DISCONNECTED]
+2021-06-01 17:38:16.340  INFO 1 --- [ueueListener0-1] cloud.na.service2.jms.QueueListener  : ---Attempt eea72ceb-96f4-47b6-ac93-ca9c87128fb5 processed
+2021-06-01 17:38:33.340  INFO 1 --- [       Thread-2] o.s.j.c.CachingConnectionFactory         : Encountered a JMSException - resetting the underlying JMS Connection
+
+javax.jms.JMSException: ActiveMQDisconnectedException[errorType=DISCONNECTED message=AMQ219015: The connection was disconnected because of server shutdown]
+        at org.apache.activemq.artemis.jms.client.ActiveMQConnection$JMSFailureListener.connectionFailed(ActiveMQConnection.java:750) ~[artemis-jms-client-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.jms.client.ActiveMQConnection$JMSFailureListener.connectionFailed(ActiveMQConnection.java:771) ~[artemis-jms-client-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl.callSessionFailureListeners(ClientSessionFactoryImpl.java:736) ~[artemis-core-client-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl.callSessionFailureListeners(ClientSessionFactoryImpl.java:724) ~[artemis-core-client-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl.failoverOrReconnect(ClientSessionFactoryImpl.java:680) ~[artemis-core-client-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl.handleConnectionFailure(ClientSessionFactoryImpl.java:525) ~[artemis-core-client-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl.access$600(ClientSessionFactoryImpl.java:74) ~[artemis-core-client-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl$DelegatingFailureListener.connectionFailed(ClientSessionFactoryImpl.java:1282) ~[artemis-core-client-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.spi.core.protocol.AbstractRemotingConnection.callFailureListeners(AbstractRemotingConnection.java:78) ~[artemis-core-client-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.core.protocol.core.impl.RemotingConnectionImpl.fail(RemotingConnectionImpl.java:220) ~[artemis-core-client-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.spi.core.protocol.AbstractRemotingConnection.fail(AbstractRemotingConnection.java:221) ~[artemis-core-client-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl$CloseRunnable.run(ClientSessionFactoryImpl.java:1050) ~[artemis-core-client-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.utils.actors.OrderedExecutor.doTask(OrderedExecutor.java:42) ~[artemis-commons-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.utils.actors.OrderedExecutor.doTask(OrderedExecutor.java:31) ~[artemis-commons-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.utils.actors.ProcessorBase.executePendingTasks(ProcessorBase.java:65) ~[artemis-commons-2.17.0.jar!/:2.17.0]
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+        at org.apache.activemq.artemis.utils.ActiveMQThreadFactory$1.run(ActiveMQThreadFactory.java:118) ~[artemis-commons-2.17.0.jar!/:2.17.0]
+Caused by: org.apache.activemq.artemis.api.core.ActiveMQDisconnectedException: AMQ219015: The connection was disconnected because of server shutdown
+        ... 7 common frames omitted
+
+2021-06-01 17:38:33.428  INFO 1 --- [ueueListener0-1] o.s.j.c.CachingConnectionFactory         : Encountered a JMSException - resetting the underlying JMS Connection
+
+javax.jms.TransactionRolledBackException: AMQ219030: The transaction was rolled back on failover to a backup server
+        at org.apache.activemq.artemis.core.client.impl.ClientSessionImpl.rollbackOnFailover(ClientSessionImpl.java:929) ~[artemis-core-client-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.core.client.impl.ClientSessionImpl.commit(ClientSessionImpl.java:961) ~[artemis-core-client-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.core.client.impl.ClientSessionImpl.commit(ClientSessionImpl.java:937) ~[artemis-core-client-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.jms.client.ActiveMQSession.commit(ActiveMQSession.java:289) ~[artemis-jms-client-2.17.0.jar!/:2.17.0]
+        at jdk.internal.reflect.GeneratedMethodAccessor79.invoke(Unknown Source) ~[na:na]
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+        at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+        at org.springframework.jms.connection.CachingConnectionFactory$CachedSessionInvocationHandler.invoke(CachingConnectionFactory.java:401) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at com.sun.proxy.$Proxy148.commit(Unknown Source) ~[na:na]
+        at org.springframework.jms.support.JmsUtils.commitIfNecessary(JmsUtils.java:218) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at org.springframework.jms.listener.AbstractMessageListenerContainer.commitIfNecessary(AbstractMessageListenerContainer.java:776) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:680) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1237) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1227) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1120) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+Caused by: org.apache.activemq.artemis.api.core.ActiveMQTransactionRolledBackException: AMQ219030: The transaction was rolled back on failover to a backup server
+        ... 18 common frames omitted
+
+2021-06-01 17:38:33.522  WARN 1 --- [ueueListener0-1] o.s.j.l.DefaultMessageListenerContainer  : Execution of JMS message listener failed, and no ErrorHandler has been set.
+
+javax.jms.TransactionRolledBackException: AMQ219030: The transaction was rolled back on failover to a backup server
+        at org.apache.activemq.artemis.core.client.impl.ClientSessionImpl.rollbackOnFailover(ClientSessionImpl.java:929) ~[artemis-core-client-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.core.client.impl.ClientSessionImpl.commit(ClientSessionImpl.java:961) ~[artemis-core-client-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.core.client.impl.ClientSessionImpl.commit(ClientSessionImpl.java:937) ~[artemis-core-client-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.jms.client.ActiveMQSession.commit(ActiveMQSession.java:289) ~[artemis-jms-client-2.17.0.jar!/:2.17.0]
+        at jdk.internal.reflect.GeneratedMethodAccessor79.invoke(Unknown Source) ~[na:na]
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+        at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+        at org.springframework.jms.connection.CachingConnectionFactory$CachedSessionInvocationHandler.invoke(CachingConnectionFactory.java:401) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at com.sun.proxy.$Proxy148.commit(Unknown Source) ~[na:na]
+        at org.springframework.jms.support.JmsUtils.commitIfNecessary(JmsUtils.java:218) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at org.springframework.jms.listener.AbstractMessageListenerContainer.commitIfNecessary(AbstractMessageListenerContainer.java:776) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:680) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1237) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1227) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1120) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+Caused by: org.apache.activemq.artemis.api.core.ActiveMQTransactionRolledBackException: AMQ219030: The transaction was rolled back on failover to a backup server
+        ... 18 common frames omitted
+
+2021-06-01 17:38:33.523  INFO 1 --- [ueueListener0-1] o.s.j.c.CachingConnectionFactory         : Encountered a JMSException - resetting the underlying JMS Connection
+
+javax.jms.TransactionRolledBackException: AMQ219030: The transaction was rolled back on failover to a backup server
+        at org.apache.activemq.artemis.core.client.impl.ClientSessionImpl.rollbackOnFailover(ClientSessionImpl.java:929) ~[artemis-core-client-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.core.client.impl.ClientSessionImpl.commit(ClientSessionImpl.java:961) ~[artemis-core-client-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.core.client.impl.ClientSessionImpl.commit(ClientSessionImpl.java:937) ~[artemis-core-client-2.17.0.jar!/:2.17.0]
+        at org.apache.activemq.artemis.jms.client.ActiveMQSession.commit(ActiveMQSession.java:289) ~[artemis-jms-client-2.17.0.jar!/:2.17.0]
+        at jdk.internal.reflect.GeneratedMethodAccessor79.invoke(Unknown Source) ~[na:na]
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+        at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+        at org.springframework.jms.connection.CachingConnectionFactory$CachedSessionInvocationHandler.invoke(CachingConnectionFactory.java:401) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at com.sun.proxy.$Proxy148.commit(Unknown Source) ~[na:na]
+        at org.springframework.jms.support.JmsUtils.commitIfNecessary(JmsUtils.java:218) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at org.springframework.jms.listener.AbstractMessageListenerContainer.commitIfNecessary(AbstractMessageListenerContainer.java:776) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:680) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1237) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1227) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1120) ~[spring-jms-5.3.7.jar!/:5.3.7]
+        at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+Caused by: org.apache.activemq.artemis.api.core.ActiveMQTransactionRolledBackException: AMQ219030: The transaction was rolled back on failover to a backup server
+        ... 18 common frames omitted
+
+2021-06-01 17:38:33.524  WARN 1 --- [ueueListener0-1] o.s.j.l.DefaultMessageListenerContainer  : Setup of JMS message listener invoker failed for destination 'QUEUE.service2.notification' - trying to recover. Cause: AMQ219030: The transaction was rolled back on failover to a backup server
